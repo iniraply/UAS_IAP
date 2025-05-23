@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Klasemen Premier League</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4 text-center">Klasemen Premier League</h1>
+      <table class="table table-bordered table-striped text-center shadow">
+        <thead class="table-dark">
+          <tr>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Game Played</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Ties</th>
+            <th>Points</th>
+            <th>Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in klasemen %}
+          <tr>
+            <td>
+              <img src="{{ i.team.logo }}" alt="logo" width="30" />
+            </td>
+            <td>{{ i.team.name }}</td>
+            <td>{{ i.stats.gamesPlayed }}</td>
+            <td>{{ i.stats.wins }}</td>
+            <td>{{ i.stats.losses }}</td>
+            <td>{{ i.stats.ties }}</td>
+            <td>{{ i.stats.points }}</td>
+            <td>{{ i.stats.rank }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="text-center mt-4">
+        <a href="/" class="btn btn-secondary">Kembali ke Home</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f0db4f;
+}
+
+.table {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+}
