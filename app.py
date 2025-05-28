@@ -32,5 +32,17 @@ def laliga():
     klasemen = response.json()
     return render_template('laliga.html', klasemen=klasemen)
 
+# Klasemen Serie A
+@app.route('/seriea')
+def serie_a():
+    url = "https://serie-a-standings.p.rapidapi.com/"
+    headers = {
+        "x-rapidapi-key": "ac2de6ff01msha261f7c9809c707p1f525djsnba0b4eb55c92",
+        "x-rapidapi-host": "serie-a-standings.p.rapidapi.com"
+    }
+    response = requests.get(url, headers=headers)
+    klasemen = response.json()
+    return render_template('seriea.html', klasemen=klasemen)
+
 if __name__ == '__main__':
     app.run(debug=True)
