@@ -14,40 +14,39 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4 text-center">Klasemen LaLiga</h1>
-      <table class="table table-bordered table-striped text-center shadow">
+      <h1 class="mb-4 text-center">LALIGA Standings</h1>
+      <div class="text-left mb-4">
+        <a href="/" class="btn btn-secondary">Home</a>
+      </div>
+      <table class="table table-bordered table-striped shadow">
         <thead class="table-dark">
           <tr>
-            <th>Logo</th>
-            <th>Name</th>
-            <th>Game Played</th>
+            <th>Position</th>
+            <th>Club</th>
+            <th>Played</th>
             <th>Wins</th>
             <th>Losses</th>
-            <th>Ties</th>
+            <th>Draws</th>
             <th>Points</th>
-            <th>Rank</th>
           </tr>
         </thead>
         <tbody>
           {% for i in klasemen %}
           <tr>
+            <td>{{ i.stats.rank }}</td>
             <td>
-              <img src="{{ i.team.logo }}" alt="logo" width="30" />
+              <img src="{{ i.team.logo }}" alt="logo" width="30" /> {{
+              i.team.name }}
             </td>
-            <td>{{ i.team.name }}</td>
             <td>{{ i.stats.gamesPlayed }}</td>
             <td>{{ i.stats.wins }}</td>
             <td>{{ i.stats.losses }}</td>
             <td>{{ i.stats.ties }}</td>
             <td>{{ i.stats.points }}</td>
-            <td>{{ i.stats.rank }}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
-      <div class="text-center mt-4">
-        <a href="/" class="btn btn-secondary">Kembali ke Home</a>
-      </div>
     </div>
   </body>
 </html>
