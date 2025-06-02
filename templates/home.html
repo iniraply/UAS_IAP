@@ -28,25 +28,27 @@
         <a href="/laliga">La Liga</a>
         <a href="/seriea">Serie A</a>
       </nav>
-      <div class="burger" onclick="toggleNav()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
       <div class="content">
         <h1>Hi There, I'm Raply</h1>
-        <p>I Am Into Web Development and Data Analyst</p>
+        <p class="subtittle">
+          Information System Student | Web Development | Data Analyst
+        </p>
         <a href="#about" class="btn">About Me</a>
 
         <div class="social-icons">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://github.com/iniraply"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.instagram.com/raflysf_?igsh=eWc0bGV2MjI0bGNi"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/raply/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
       </div>
 
@@ -61,29 +63,67 @@
     <!-- Cards Section -->
     <section class="cards" id="about">
       <div class="card">
-        <h3>About Me</h3>
+        <h3>Profile</h3>
         <p>
-          Mahasiswa SI, hobi ngoding, pecinta bola, dan full-stack dev wannabe.
-          😎
+          Mahasiswa Sistem Informasi Fakultas Sains dan Teknologi UIN Imam
+          Bonjol Padang dengan minat besar pada analisis sistem, dan
+          pengembangan aplikasi. Memiliki dasar yang kuat di pemrograman, basis
+          data, serta pemahaman alur bisnis dan teknologi. Berpengalaman
+          mengelola proyek kecil dan bekerja dalam tim untuk mengembangkan
+          solusi digital.
         </p>
       </div>
+
       <div class="card">
-        <h3>Project: Flask Standings</h3>
-        <p>
-          Web Flask untuk menampilkan klasemen Liga Inggris dan La Liga realtime
-          via RapidAPI.
-        </p>
+        <h3>Technologies Used</h3>
+        <ul>
+          <li>Python + Flask (Backend & Routing)</li>
+          <li>HTML5 + CSS3 (Frontend)</li>
+          <li>
+            Sumber API via RapidAPI
+            <ul>
+              <a
+                href="https://rapidapi.com/UnlimitedAPI/api/premier-league-standings1"
+                >- Premier Leauge Standings</a
+              >
+            </ul>
+            <ul>
+              <a href="https://rapidapi.com/UnlimitedAPI/api/laliga-standings"
+                >- La Liga Standings</a
+              >
+            </ul>
+            <ul>
+              <a href="https://rapidapi.com/UnlimitedAPI/api/serie-a-standings"
+                >- Serie A Standings</a
+              >
+            </ul>
+          </li>
+        </ul>
       </div>
+
       <div class="card">
-        <h3>Skills</h3>
-        <p>Python, Flask, HTML, CSS, API, Git, UI/UX basic.</p>
+        <h3>Projects</h3>
+        <ul>
+          <li>
+            <strong>Customer Segmentation Classifier</strong>
+            <ul>
+              Tech Stack: Python + Machine Learning, Streamlit Deployment
+            </ul>
+          </li>
+          <li>
+            <strong>Smartphone Product Segmentation</strong>
+            <ul>
+              Tech Stack: Python + Machine Learning, Streamlit Deployment
+            </ul>
+          </li>
+          <li>
+            <strong>Sistem Informasi Distribusi Permintaan Barang</strong>
+            <ul>
+              Tech Stack: PHP + CodeIgniter, Bootstrap, MySQL
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
-    <script>
-      function toggleNav() {
-        const nav = document.getElementById("navLinks");
-        nav.classList.toggle("active");
-      }
-    </script>
   </body>
 </html>
