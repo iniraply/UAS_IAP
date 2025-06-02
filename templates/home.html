@@ -11,38 +11,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/10c4301749.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <h1>Football Standings</h1>
-      <nav>
+      <nav id="navLinks">
         <a href="/premierleague">Premier League</a>
-        <a href="/laliga">LALIGA</a>
+        <a href="/laliga">La Liga</a>
         <a href="/seriea">Serie A</a>
       </nav>
+      <div class="burger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </header>
 
-    <div class="container">
-      <section class="profile">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="content">
+        <h1>Hi There, I'm Raply</h1>
+        <p>I Am Into Web Development and Data Analyst</p>
+        <a href="#about" class="btn">About Me</a>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="avatar">
         <img
           src="{{ url_for('static', filename='img/profile.png') }}"
-          alt="My Photo"
+          alt="Raply Avatar"
         />
-        <div class="profile-info">
-          <h2>Raply</h2>
-          <p>
-            <strong>Mahasiswa Sistem Informasi</strong><br />UIN Imam Bonjol
-            Padang
-          </p>
-          <p>
-            Saya sedang mengembangkan website untuk menampilkan klasemen Liga
-            Inggris dan Spanyol menggunakan Flask dan RapidAPI.💥⚽.
-          </p>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards" id="about">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>
+          Mahasiswa SI, hobi ngoding, pecinta bola, dan full-stack dev wannabe.
+          😎
+        </p>
+      </div>
+      <div class="card">
+        <h3>Project: Flask Standings</h3>
+        <p>
+          Web Flask untuk menampilkan klasemen Liga Inggris dan La Liga realtime
+          via RapidAPI.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Skills</h3>
+        <p>Python, Flask, HTML, CSS, API, Git, UI/UX basic.</p>
+      </div>
+    </section>
+    <script>
+      function toggleNav() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
