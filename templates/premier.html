@@ -9,17 +9,30 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
-    <div class="container mt-5">
-      <h1 class="mb-4 text-center">Premier League Standings</h1>
-      <div class="text-left mb-4">
-        <a href="/" class="btn btn-secondary">Home</a>
+    <header>
+      <h1>Football Standings</h1>
+      <nav id="navLinks">
+        <a href="/premierleague">Premier League</a>
+        <a href="/laliga">La Liga</a>
+        <a href="/seriea">Serie A</a>
+      </nav>
+    </header>
+    <!-- Standings Table -->
+    <div class="standings-container">
+      <h1 class="standings-title">Premier League Standings</h1>
+      <div class="mb-3 text-start">
+        <a href="/" class="btn btn-home">Home</a>
       </div>
-      <table class="table table-bordered table-striped shadow">
-        <thead class="table-dark">
+      <table class="table table-bordered table-striped">
+        <thead>
           <tr>
             <th>Position</th>
             <th>Club</th>
@@ -35,8 +48,7 @@
           <tr>
             <td>{{ i.stats.rank }}</td>
             <td>
-              <img src="{{ i.team.logo }}" alt="logo" width="30" /> {{
-              i.team.name }}
+              <img src="{{ i.team.logo }}" alt="logo" /> {{ i.team.name }}
             </td>
             <td>{{ i.stats.gamesPlayed }}</td>
             <td>{{ i.stats.wins }}</td>
