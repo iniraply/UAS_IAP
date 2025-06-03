@@ -12,9 +12,10 @@ def home():
 @app.route('/premierleague')
 def premier_league():
     url = "https://premier-league-standings1.p.rapidapi.com/"
+
     headers = {
-        "x-rapidapi-key": "ac2de6ff01msha261f7c9809c707p1f525djsnba0b4eb55c92",
-        "x-rapidapi-host": "premier-league-standings1.p.rapidapi.com"
+	"x-rapidapi-key": "035dd2649bmshcfa3a58921ad63cp1022c1jsn4e3c0b56f801",
+	"x-rapidapi-host": "premier-league-standings1.p.rapidapi.com"
     }
     response = requests.get(url, headers=headers)
     klasemen = response.json()
@@ -24,9 +25,10 @@ def premier_league():
 @app.route('/laliga')
 def laliga():
     url = "https://laliga-standings.p.rapidapi.com/"
+
     headers = {
-        "x-rapidapi-key": "ac2de6ff01msha261f7c9809c707p1f525djsnba0b4eb55c92",
-        "x-rapidapi-host": "laliga-standings.p.rapidapi.com"
+	"x-rapidapi-key": "035dd2649bmshcfa3a58921ad63cp1022c1jsn4e3c0b56f801",
+	"x-rapidapi-host": "laliga-standings.p.rapidapi.com"
     }
     response = requests.get(url, headers=headers)
     klasemen = response.json()
