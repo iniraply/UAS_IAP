@@ -33,9 +33,9 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="content">
-        <h1>Hi There, I'm Raply</h1>
+        <h1>Hi There, I'm <span id="typed-name"></span></h1>
         <p class="subtittle">
-          Information System Student | Web Development | Data Analyst
+          Building websites, analyzing data, and chasing big dreams.
         </p>
         <a href="#about" class="btn">About Me</a>
 
@@ -125,5 +125,20 @@
         </ul>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typedName = new Typed("#typed-name", {
+        strings: ["Muhammad Rafly"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        showCursor: true,
+        cursorChar: "|",
+        loop: false,
+        onComplete: function (self) {
+          self.cursor.remove(); // ini yang bikin cursor-nya hilang setelah selesai ngetik
+        },
+      });
+    </script>
   </body>
 </html>
